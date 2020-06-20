@@ -1,3 +1,5 @@
+package test;
+
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.scene.canvas.GraphicsContext;

@@ -1,3 +1,5 @@
+package test;
+
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.IOException;
@@ -12,6 +14,10 @@ public class Server {
     private int port;
     private Set<UserThread> userThreads = new HashSet<>();
     private List<Integer> players;
+    // enemy hash map
+
+    private HashMap<Integer, Rocket> enemies;
+
     // private Set<Shot> shots;
     private Map<Integer,Shot> shots;
     private int numberOfPlayers = 0;
@@ -32,6 +38,9 @@ public class Server {
             // create a new shotThread for updating shot positions
             ShotThread shotThread = new ShotThread(this, shots);
             shotThread.start();
+
+            EnemyThread enemyThread = new EnemyThread(this, enemies);
+            enemyThread.start();
  
             while (true) {
                 Socket socket = serverSocket.accept();

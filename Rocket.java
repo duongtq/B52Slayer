@@ -1,3 +1,5 @@
+package test;
+
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
@@ -11,6 +13,10 @@ public class Rocket {
         this.posX = posX;
         this.posY = posY;
         this.size = size;
+    }
+
+    public Rocket() {
+
     }
     
     public Shot shoot() {

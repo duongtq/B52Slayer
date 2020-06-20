@@ -1,3 +1,5 @@
+package test;
+
 //bullets
 public class Shot {
 		

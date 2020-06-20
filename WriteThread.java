@@ -1,10 +1,9 @@
-import java.io.IOException;
+package test;
 
-import javafx.io.*;
-import javafx.net.*;
+import java.io.BufferedWriter;
 
 public class WriteThread {
-    protected BufferredWriter writer;
+    protected BufferedWriter writer;
     protected Client client;
 
     public WriteThread(Client client, BufferedWriter writer) {
@@ -14,12 +13,7 @@ public class WriteThread {
 
     public void run() {
         while(true) {
-            try {
-                
-            } catch(IOException ex) {
-                System.out.println("Error when trying to create client socket: " + ex.getMessage());
-                ex.printStackTrace();
-            }
+
         }
     }
 }
